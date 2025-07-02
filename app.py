@@ -7,10 +7,10 @@ import io
 from fpdf import FPDF
 import json
 import nltk
+import os
 
-# Fix: Download necessary corpora
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
+nltk.data.path.append(os.path.join(os.path.dirname(__file__), 'nltk_data'))
+
 st.set_page_config(page_title="Emotional Tone Analyzer", layout="wide")
 
 # --- Custom CSS for modern, neutral design ---
@@ -200,4 +200,12 @@ elif analyze and not texts:
 else:
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.info("Please upload a file or paste some text, then click 'Analyze'.")
-    st.markdown('</div>', unsafe_allow_html=True) 
+    st.markdown('</div>', unsafe_allow_html=True)
+
+nltk.download('punkt', download_dir='nltk_data')
+nltk.download('averaged_perceptron_tagger', download_dir='nltk_data')
+nltk.download('brown', download_dir='nltk_data')
+nltk.download('wordnet', download_dir='nltk_data')
+nltk.download('maxent_treebank_pos_tagger', download_dir='nltk_data')
+nltk.download('maxent_ne_chunker', download_dir='nltk_data')
+nltk.download('words', download_dir='nltk_data') 
