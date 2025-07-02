@@ -4,5 +4,6 @@ matplotlib
 wordcloud
 pandas
 spacy
+FPDF
 # If you want to always ensure the model is available, you can add a comment:
 # After installing, run: python -m spacy download en_core_web_sm 
