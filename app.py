@@ -11,8 +11,6 @@ import nltk
 # Fix: Download necessary corpora
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
-
-
 st.set_page_config(page_title="Emotional Tone Analyzer", layout="wide")
 
 # --- Custom CSS for modern, neutral design ---
