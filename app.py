@@ -6,6 +6,7 @@ from wordcloud import WordCloud
 import io
 from fpdf import FPDF
 import json
+import nltk
 
 st.set_page_config(page_title="Emotional Tone Analyzer", layout="wide")
 
